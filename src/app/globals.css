@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+@layer components {
+  .main-container {
+    max-width: 1280px;
+    margin: 0 auto;
+
+    @media (width >= 768px) {
+      max-width: 768px;
+    }
+
+    @media (width >= 1024px) {
+      max-width: 1024px;
+    }
+
+    @media (width >= 1280px) {
+      max-width: 1280px;
+    }
+  }
+}
+
+/* ПІДКРЕСЛЕННЯ ПОСИЛАНЬ ЗАГОЛОВКІВ
+<h3 className="тут якісь свої стилі заголовку transition-transform duration-200 group-hover:translate-y-px">
+      <span className="group-hover:underline decoration-2 underline-offset-4 decoration-gray-800"
+        >
+         {якийсь тайтл}
+      </span>
+  </h3> */
+
+/* ХОВЕР КАРТИНОК
+  <Link
+  href=якийсь
+  className="group і якісь свої стилі"
+      >
+        <Image
+          src={mainImage}
+          alt={title}
+          fill
+          className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+          sizes=""
+        />
+  </Link> */
